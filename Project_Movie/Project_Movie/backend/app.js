@@ -10,7 +10,11 @@ dotenv.config();
 const app = express();
 
 // middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://booking-web-7crg.vercel.app",
+  methods: ["GET", "POST","DELETE","PUT"],
+  credentials: true,
+}));
 app.use(express.json());
 app.use("/user", userRouter);
 app.use("/admin", adminRouter);
