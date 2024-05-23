@@ -23,7 +23,7 @@ app.use("/booking", bookingsRouter);
 
 mongoose
   .connect(
-    `mongodb+srv://haobestys:${process.env.MONGODB_PASSWORD}@cluster0.9hpmxww.mongodb.net/Cluster0?retryWrites=true&w=majority&appName=Cluster0`
+    `mongodb+srv://haobestys:${process.env.MONGODB_PASSWORD}@cluster0.9hpmxww.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
   )
   .then(() =>
     app.listen(5000, () =>
